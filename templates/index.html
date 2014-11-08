@@ -27,11 +27,17 @@
 				'Imagery © <a href="http://mapbox.com">Mapbox</a>',
 			id: 'examples.map-i875mjb7'
 		}).addTo(map);
+    //Icon
+    var bathroomIcon = L.icon({
+    icon.url: 'img/toilets_normal.png',
+    iconSize:    [32, 37], //size of the icon
+    iconAnchor:  [22, 94], //point that corresponds to the markers location
+    popupAnchor: [-3, 76]  //point that the popup should open relative to the iconAnchor
+    });
 
     //Bathrooms:
-		L.marker([34.0205, -118.2856]).addTo(map)
+		L.marker([34.0205, -118.2856]{icon: bathroomIcon}).addTo(map)
 			.bindPopup("html content for the object and stripe goes here");
-
 
 		var popup = L.popup();
 
@@ -41,14 +47,7 @@
 				.setContent("You clicked the map at " + e.latlng.toString())
 				.openOn(map);
 		}
-var bathroomIcon = L.icon({
-  icon.url: 'img/toilets_normal.png',
-
-  iconSize:    [32, 37], //size of the icon
-  iconAnchor:  [22, 94], //point that corresponds to the markers location
-  popupAnchor: [-3, 76]  //point that the popup should open relative to the iconAnchor
-});
-		map.on('click', onMapClick);
+    map.on('click', onMapClick);
   </script>
 </body>
 </html>
