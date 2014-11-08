@@ -8,8 +8,10 @@
   <div id="map" style="width: 1200px; height: 800px"></div>
   <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
   <script>
+    //map initialization
     var map = L.map('map').setView([34.0205, -118.2856], 15);
 
+    //stuff about the map
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
 			attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
@@ -20,7 +22,7 @@
 
     //Bathrooms:
 		L.marker([34.0205, -118.2856]).addTo(map)
-			.bindPopup("html content for the object and stripe goes here").openPopup();
+			.bindPopup("html content for the object and stripe goes here");
 
 
 		var popup = L.popup();
