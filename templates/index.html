@@ -11,6 +11,14 @@
     //map initialization
     var map = L.map('map').setView([34.0205, -118.2856], 15);
 
+    var SW = L.latLng(34.01085, -118.3002);
+    var SE = L.latLng(34.01114, -118.28271);
+    var NW = L.latLng(34.02542, -118.3002);
+    var NE = L.latLng(34.02513, -118.28286);
+    var bounds = L.latLngBounds(SW, NE);
+    map.fitBounds(bounds);
+
+
     //stuff about the map
 		L.tileLayer('https://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {
 			maxZoom: 18,
