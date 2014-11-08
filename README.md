@@ -8,5 +8,7 @@ Set up website
 Add API: Leaflet or Google Maps
 Script for random bathroom locations
 Custom popups for each restroom
-Integrate Stripe for payment
+Integrated Stripe for payment
+Incorporated with ratings
+
 
