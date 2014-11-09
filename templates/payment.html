@@ -4,15 +4,18 @@
   <title>Pay With Stripe</title>
 </head>
 <body>
-  <form action="/charge" method="POST">
+  <form action="/charge">
   <script
     src="https://checkout.stripe.com/checkout.js" class="stripe-button"
     data-key="pk_test_hZ99EIQ9oof311VWdNb2NnMz"
     data-image="/square-image.png"
-    data-name="Demo Site"
-    data-description="2 widgets ($20.00)"
-    data-amount="2000">
+    data-name="Pay2Pee"
+    data-description="Using the Bathroom ($1.50)"
+    data-amount="150">
   </script>
+</form>
+<form action="index">
+    <input type="submit" value="Go Back">
 </form>
 </body>
 </html>
